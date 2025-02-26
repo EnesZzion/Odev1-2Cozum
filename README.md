@@ -24,5 +24,3 @@ Aşağıdaki kavramları araştırarak açıklayınız:
 ✅ Ödevlerinizi kod yazarak tamamlayın.
 ✅ GitHub üzerinde bir repository oluşturun ve ödev açıklamasına GitHub repo linkinizi ekleyin.
 ✅ Ödev dosyalarınızı ZIP formatında sıkıştırarak sisteme "Dosya Yükle" seçeneği üzerinden yükleyin.
-
-Başarılar dileriz! 🚀💡
