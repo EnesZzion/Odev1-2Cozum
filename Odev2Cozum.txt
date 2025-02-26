@@ -1,0 +1,74 @@
+﻿//------------------------------------------------ ÖDEV 2 ÇÖZÜM ---------------------------------------------------//
+     ABSTRACT CLASS NEDİR:
+Anladığım kadarıyla, 
+Biz abstract class'ı genel bir sınıf gibi düşünüyoruz. İçerisinde diğer sınıflarda
+ortak olarak bulunan metot ve değişkenleri abstract sınıfta toparlayıp, bu class'ın özelliklerini kullanan
+diğer sınıfları türeteceğiz.
+Yani şöyle örnek vermem gerekirse; bir araba sınıfı oluşturduk ve bu araba sınıfını abstract hale getirdiğimizde,
+artık arabayı diğer sınıflar gibi çağırmayacağız. Sadece ortak olarak kullanılan özellikleri 
+(metotları,değişkenleri) burada toparlayarak veri kalabalıklığından kurtulmuş olacağız.
+--------------------------------------------------------------------------------------------------------------------
+    ABSTRACTİON NEDİR:
+Anladığım kadarıyla,
+Interface bir soyut yapıdır ve sadece metot içerir ve bu methotun içi boştur.Aynı şekilde Abstraction da
+ABSTRACT CLASS ın içinde oluşturulur bir prototip gibidir bu methotun detayları ile ilgilenmez
+karmaşıklığı gizleyerek sadece gerekli olanı göstermektir amacı.Detayları alt sınıflarda doldurulur.
+Mesela araba sınıfında     
+public void ArabaOzellik(string _model,string _vites)
+    {
+        Console.WriteLine(_model+" "+_vites+" viteslidir");
+    }
+kodu yazılmış bunu abstract yapmak istersek Bu methotun içini boş bırakmalıyız. 
+public abstract void ArabaOzellik(string _model, string _vites);
+Methotun içini BMW,Audi... alt sınıflarında doldurmalıyız. 
+Karmaşık bilgileri abstract sınıfında tutmamalıyız.
+--------------------------------------------------------------------------------------------------------------------
+    POLYMORPHİSM NEDİR:
+Anladığım kadarıyla,
+Bunu iki şekilde kullanabiliriz 
+1-Method Overloading.
+2-Method Overriding.
+
+1-Method Overloading: 
+Aynı isimde iki tane fonksiyonumuz olsun
+void topla(int a,int b);
+void topla(double a double b);
+bu fonksiyonlar aynı isimde olsalarda farklı parametrelerde oldugu için herhangi bir problem yaşamadan
+bu iki fonksiyonuda rahatça kullanabileceğiz.Aynı işlemi yaptığımız için farklı bir fonksiyon ismi kullanmamıza
+gerek kalmaz.
+
+2-Method Override
+Kalıtım kullanılarak bir üst sınıfta tanımlanan bir metodun, alt sınıfta özelleştirilmesidir.
+Araba sınıfında bir virtual fonksiyon belirliyoruz.
+    public virtual void ArabayiCalistir()  // virtual = bu metod ezilebilir!
+    {
+        Console.WriteLine("Araba çalıştırıldı.");
+    }
+Bu fonksiyon mesela Audi sıfında farklı şekilde çalıştırılması gerekiyor bunu override ederek sağlıyoruz.
+    public override void ArabayiCalistir()
+    {
+        Console.WriteLine("Audi çalıştırıldı. Motor çok sessiz");
+    }
+Aynı metodu override ettim ve bu metodu kendi tarzına göre değiştirdim.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
